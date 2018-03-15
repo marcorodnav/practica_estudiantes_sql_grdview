@@ -40,15 +40,6 @@ namespace Upi {
         protected global::System.Web.UI.WebControls.TextBox txtCodigoEstudiante;
         
         /// <summary>
-        /// validatorCodigo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator validatorCodigo;
-        
-        /// <summary>
         /// txtNombreEstudiante control.
         /// </summary>
         /// <remarks>
@@ -58,15 +49,6 @@ namespace Upi {
         protected global::System.Web.UI.WebControls.TextBox txtNombreEstudiante;
         
         /// <summary>
-        /// validatorNombre control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator validatorNombre;
-        
-        /// <summary>
         /// btnIngresarEstudiante control.
         /// </summary>
         /// <remarks>
@@ -74,24 +56,6 @@ namespace Upi {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnIngresarEstudiante;
-        
-        /// <summary>
-        /// btnBorrarEstudiante control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBorrarEstudiante;
-        
-        /// <summary>
-        /// btnActualizarEstudiante control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnActualizarEstudiante;
         
         /// <summary>
         /// lblEstadoInsertar control.
