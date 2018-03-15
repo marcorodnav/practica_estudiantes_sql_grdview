@@ -12,7 +12,7 @@ namespace Upi
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            updateGrdEstudiantes();
         }
 
         protected void btnIngresarEstudiante_Click(object sender, EventArgs e)
@@ -27,6 +27,7 @@ namespace Upi
             cantAgregados = comando.ExecuteNonQuery();
             conexion.Close();
             lblEstadoInsertar.Text = (cantAgregados > 0 ? "Estudiante "+ nombreInsertar+ " creado!" : "Error al ingresar estudiante con codigo: "+ codigoInsertar +"...");
+            updateGrdEstudiantes();
         }
 
         protected void btnBorrarEstudiante_Click(object sender, EventArgs e)
@@ -40,6 +41,7 @@ namespace Upi
             cantAgregados = comando.ExecuteNonQuery();
             conexion.Close();
             lblEstadoInsertar.Text = (cantAgregados > 0 ? "Estudiante con codigo: "+ codigoBorrar +" borrado!" : "Error al borrar estudiante...");
+            updateGrdEstudiantes();
         }
 
         protected void btnActualizarEstudiante_Click(object sender, EventArgs e)
@@ -54,6 +56,17 @@ namespace Upi
             cantAgregados = comando.ExecuteNonQuery();
             conexion.Close();
             lblEstadoInsertar.Text = (cantAgregados > 0 ? "Estudiante con codigo: " + codigoActualizar + " actualizado!" : "Error al actualizar estudiante...");
+            updateGrdEstudiantes();
+        }
+
+        protected void updateGrdEstudiantes()
+        {
+            string connectionStringEmpleados = System.Configuration.ConfigurationManager.ConnectionStrings["cadenaConexion1"].ConnectionString;
+            SqlDataAdapter Adp = new SqlDataAdapter("SELECT * FROM ESTUDIANTE", connectionStringEmpleados);
+            System.Data.DataTable Dt = new System.Data.DataTable();
+            Adp.Fill(Dt);
+            grdViewEstudiante.DataSource = Dt;
+            grdViewEstudiante.DataBind();
         }
     }
 }
