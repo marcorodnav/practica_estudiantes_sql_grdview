@@ -25,6 +25,12 @@
         <asp:Button ID="btnIngresarEstudiante" runat="server" OnClick="btnIngresarEstudiante_Click" Text="Ingresar" />
         <br />
         <br />
+        <asp:Button ID="btnBorrarEstudiante" runat="server" OnClick="btnBorrarEstudiante_Click" Text="Borrar" />
+        <br />
+        <br />
+        <asp:Button ID="btnActualizarEstudiante" runat="server" OnClick="btnActualizarEstudiante_Click" Text="Actualizar" />
+        <br />
+        <br />
         <asp:Label ID="lblEstadoInsertar" runat="server"></asp:Label>
     
     </div>
